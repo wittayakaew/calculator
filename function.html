@@ -1,0 +1,29 @@
+<!DOCTYPE.html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function calculator (pa1,pa2){
+                return pa1+pa2;
+            }
+
+
+            var res = calculator(10,2);
+            console.log(res);
+
+            //---Callback function --- ทำงานแบบไม่ต้องรอ
+            function say(){
+                console.log("say");
+                function sayhi(){
+                    setTimeout(function() {
+                        console.log("Hi");
+                },30000);
+                }
+                sayhi();
+                console.log("buy");
+            }
+            say();
+
+        </script>
+    </body>
+</html>

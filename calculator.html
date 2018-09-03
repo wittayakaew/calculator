@@ -1,0 +1,81 @@
+ <!DOCTYPE.html>
+<html>
+
+    <head>
+        <title >Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        
+        .button{
+        width: 45px;
+        height: 45px;
+        font-size: 25;
+        margin: 2;
+        cursor: pointer;
+
+    }
+    .settt{
+        font-size: 60;
+    }
+        </style>
+    </head>
+
+    <body background="02.jpg" >
+        <header style="text-align:center" >Calculator</header>
+
+        <div>
+        <input type="text" id = "firstnumber" placeholder="put firstNumber"> 
+        <input type="text" id = "secondnumber" placeholder="put secondumber"> 
+        
+        <button class="button" id = "sumbutton" onclick="getSum()">+</button>
+        <button class="button" id = "Delbutton" onclick="getDel()">-</button>
+        <button class="button" id = "timbutton" onclick="getTime()">X</button>
+        <button class="button" id = "Divbutton" onclick="getDiv()">/</button>
+      
+        
+        <div id ="output" style="text-align:center" class="settt"></div>
+        
+        <script>
+            
+            var firstnumber = document.getElementById("firstnumber");
+            var secondnumber = document.getElementById("secondnumber");
+            var output =document.getElementById("output");
+
+            function getSum(){
+              var sum = parseInt(firstnumber.value) +
+              parseInt(secondnumber.value);
+                console.log(sum);
+                showresult(sum);
+            }
+
+            function getDel(){
+              var sum = parseInt(firstnumber.value) -
+              parseInt(secondnumber.value);
+                console.log(sum);
+                showresult(sum);
+            }
+
+            function getTime(){
+              var sum = parseInt(firstnumber.value) *
+              parseInt(secondnumber.value);
+                console.log(sum);
+                showresult(sum);
+            }
+
+            function getDiv(){
+              var sum = parseInt(firstnumber.value) /
+              parseInt(secondnumber.value);
+                console.log(sum);
+                showresult(sum);
+            }
+            function showresult(result){
+                output.innerHTML = "answer :"+ result;
+                
+                
+            }
+        </script>
+</div>
+        
+    </body>
+</html>
+

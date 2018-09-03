@@ -1,0 +1,34 @@
+<!DOCTYPE.html>
+<html>
+    <head>
+        <title>hoist</title>
+    </head>
+
+    <body>
+        <script>
+            //---scope variable---ขอบเขตารมองเห็นของตัวแปล
+            function myFuctionsay(){
+                var a  = "Bye"
+                console.log(a);
+            }            
+            //console.log(a);
+            //Hoist variable---ดึงตัวแปลให้ถูกประกาสไว้บนสุดของ function
+            function my(num){
+                console.log(value);
+                if(num > 10){
+                    var value = num * 10 ;
+                }else{
+                    console.log(value);
+                }
+            }
+
+            my(11);
+
+                //---Hoist funtion---
+                myHoist();
+                function myHoist(){
+                        console.log("Hoisted")
+                }
+            </script>
+    </body>
+</html>
